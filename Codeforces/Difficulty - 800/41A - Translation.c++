@@ -14,14 +14,11 @@ int main()
     
     cin >> reverseword;
     
-    for(int i = 0; i < word.length() - 1; i++)
+    for(int i = 0, j = word.length() - 1; i < j; i++, j--)
     {
-        for(int j = 0; j < word.length() - i - 1; j++)
-        {
-            aux = word[j];
-            word[j] = word[j + 1];
-            word[j + 1] = aux;
-        }
+        aux = word[i];
+        word[i] = word[j];
+        word[j] = aux;
     }
     
     if (reverseword == word)
